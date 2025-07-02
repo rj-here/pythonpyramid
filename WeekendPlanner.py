@@ -5,10 +5,12 @@ def whatHouseTasks():
     print('What house related tasks do you need to complete? Seperate them with |')
     houseTasks = 'Groceries | Laundry'
     houseTasksList = houseTasks.split(' | ')
-    #print(houseTasksList)
     print('House tasks: ')
-    for task in houseTasksList:
+    print('One-by-one:')
+    for task in houseTasksList: #printing each one by one
         print(task)
+    print('All at once:') #printing them all, seeing how printing a list goes
+    print(houseTasksList)
 
 whatHouseTasks()
 
@@ -16,10 +18,12 @@ def whatOccasionalTasks():
     print('What occasional tasks (getting a haircut, cutting the grass, etc) do you need to complete? Seperate with them |')
     occasionalTasks = 'Get a haircut | Cut the grass'
     occasionalTasksList = occasionalTasks.split(' | ')
-    #print(occasionalTasksList)
     print('Occasional tasks: ')
-    for task in occasionalTasksList:
+    print('One-by-one:')
+    for task in occasionalTasksList: #printing each one by one
         print(task)
+    print('All at once:') #printing them all, seeing how printing a list goes
+    print(occasionalTasksList)
 
 whatOccasionalTasks()
 
@@ -27,10 +31,12 @@ def whatSpecialThings():
     print("What special things (go out for dinner, watch a movie, etc) would you like to do? Seperate them with |")
     specialThings = 'Going out for dinner | Meeting friends'
     specialThingsList = specialThings.split(' | ')
-    #print(specialThingsList)
     print('Special things: ')
-    for thing in specialThingsList:
-        print(thing)
+    print('One-by-one:')
+    for task in specialThingsList: #printing each one by one
+        print(task)
+    print('All at once:') #printing them all, seeing how printing a list goes
+    print(specialThingsList)
 
 whatSpecialThings()
 

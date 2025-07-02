@@ -3,21 +3,33 @@ print('Hello there! This will be a weekend planner. This is going to be more foc
 
 def whatHouseTasks():
     print('What house related tasks do you need to complete? Seperate them with |')
-    #houseTasks = input
-    #houseTasksList = houseTasks.split('|')
+    houseTasks = 'Groceries | Laundry'
+    houseTasksList = houseTasks.split(' | ')
+    print('House tasks: ')
+    for task in houseTasksList:
+        print(task)
 
 whatHouseTasks()
 
 def whatOccasionalTasks():
     print('What occasional tasks (getting a haircut, cutting the grass, etc) do you need to complete? Seperate with them |')
-    #occasionalTasks = input
-    #occasionalTasksList = occasionalTasks.split('|')
+    occasionalTasks = 'Get a haircut | Cut the grass'
+    occasionalTasksList = occasionalTasks.split(' | ')
+    print('Occasional tasks: ')
+    for task in occasionalTasksList:
+        print(task)
 
 whatOccasionalTasks()
 
 def whatSpecialThings():
     print("What special things (go out for dinner, watch a movie, etc) would you like to do? Seperate them with |")
-    #specialThings = input
-    #specialThingsList = specialThings.split('|')
+    specialThings = 'Going out for dinner | Meeting friends'
+    specialThingsList = specialThings.split(' | ')
+    print('Special things: ')
+    for thing in specialThingsList:
+        print(thing)
 
 whatSpecialThings()
+
+#© 2025 Rishi
+#Last updated: 2nd July, 2025

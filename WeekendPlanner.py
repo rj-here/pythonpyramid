@@ -5,6 +5,7 @@ def whatHouseTasks():
     print('What house related tasks do you need to complete? Seperate them with |')
     houseTasks = 'Groceries | Laundry'
     houseTasksList = houseTasks.split(' | ')
+    #print(houseTasksList)
     print('House tasks: ')
     for task in houseTasksList:
         print(task)
@@ -15,6 +16,7 @@ def whatOccasionalTasks():
     print('What occasional tasks (getting a haircut, cutting the grass, etc) do you need to complete? Seperate with them |')
     occasionalTasks = 'Get a haircut | Cut the grass'
     occasionalTasksList = occasionalTasks.split(' | ')
+    #print(occasionalTasksList)
     print('Occasional tasks: ')
     for task in occasionalTasksList:
         print(task)
@@ -25,6 +27,7 @@ def whatSpecialThings():
     print("What special things (go out for dinner, watch a movie, etc) would you like to do? Seperate them with |")
     specialThings = 'Going out for dinner | Meeting friends'
     specialThingsList = specialThings.split(' | ')
+    #print(specialThingsList)
     print('Special things: ')
     for thing in specialThingsList:
         print(thing)

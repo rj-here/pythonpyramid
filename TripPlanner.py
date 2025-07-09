@@ -3,7 +3,7 @@
 #This is part of a growing collection of Python programs, for me to get a proper grasp of basics, and for you to see.
 print('Welcome! This is going to be a trip planner, assisting in details like the location, activities, people accompanying, shopping list, and more.')
 def typeOfTrip():
-    tripType = input('What type of trip is being planned? (Day trip, weekend trip, week-long, or just a good old long proper vacation?)\n')
+    tripType = input('What type of trip is being planned? (Day trip, short (weekend or 2-3 day trip), week-long, or just a good old long proper vacation?)\n')
     print(f'This trip is a {tripType}.')
 
 typeOfTrip()
@@ -44,4 +44,4 @@ def tripBudget():
 tripBudget()
 
 #© 2025 Rishi
-#Last updated: 8th July, 2025
+#Last updated: 9th July, 2025

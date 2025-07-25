@@ -11,7 +11,7 @@ for player in my_playing_XI:
     #Now, we will get the role(s) of each player
     role = input(f'Enter the role of {player} (batter, bowler, all-rounder, wicket-keeper): ')
     #To check if the role is valid
-    valid_roles = ['batter', 'bowler', 'all-rounder', 'wicket-keeper']
+    valid_roles = ['batter', 'Batter', 'BATTER', 'bowler', 'Bowler', 'BOWLER', 'allrounder', 'Allrounder', 'ALLROUNDER', 'bowling allrounder', 'Bowling Allrounder', 'BOWLING ALLROUNDER', 'batting allrounder', 'Batting Allrounder', 'BATTING ALLROUNDER', 'wicketkeeper', 'Wicketkeeper', 'WICKETKEEPER']
     if role not in valid_roles:
         print(f'Invalid role! Please enter a valid one for {player}')
         role = input(f'Enter the role of {player}')
@@ -19,7 +19,7 @@ for player in my_playing_XI:
     else:
         print(f'Adding {player} as {role} to the playing XI.')
         my_playing_XI[player] = role + ', ' #Updating player's role in the dictionary!
-#Now, to define the captain, vice-captain,
+#Now, to define the captain, vice-captain
 captain = input('Enter the name of the captain: ') #For the captain
 if captain not in my_playing_XI:
     print(f'{captain} is not in the playing XI! Please enter a valid captain.')
@@ -55,8 +55,9 @@ for player in my_playing_XI:
     if player not in ['wicket-keeper']:
         bowling_arm = input(f'Is {player} a right-arm or left-arm bowler? Enter R for right-arm, L for left-arm:') #Take the arm (right or left)
         bowling_type = input(f'Is {player} a spin or seam bowler? Enter spin for spin, seam for seam: ')
-        if bowling_type == 'spin':
-            spin_type = input(f'Is {player} a leg-spinner or off-spinner? Enter L for the leg-spinner, O for the off-spiner: ')
+        #For Spin - references: https://en.wikipedia.org/wiki/Spin_bowling | https://en.wikipedia.org/wiki/Left-arm_orthodox_spin | https://en.wikipedia.org/wiki/Left-arm_unorthodox_spin
+        if bowling_type in ['Spin', 'spin', 'SPIN']:
+            spin_type = input(f'What type of spinner is {player}? Enter L for leg-spin (for right armers, OR for lefties: left-arm unorthodox spin). Enter O for off-spin (for right armers, OR for righties: left-arm orthodox spin)')
             if spin_type in ['L', 'l']:
                 if bowling_arm in ['R', 'r']:
                     my_playing_XI[player] += 'right-arm leg-spinner'
@@ -67,8 +68,9 @@ for player in my_playing_XI:
                     my_playing_XI[player] += 'right-arm off-spinner'
                 elif bowling_arm in ['L', 'l']:
                     my_playing_XI[player] += 'left-arm off-spinner'
-        elif bowling_type == 'seam':
-            seam_type = input(f'Is {player} a fast, fast-medium, medium-fast, medium, or slow bowler? Enter 1 for fast, 2 for fast-medium, 3 for medium-fast, 4 for medium, and 5 for slow:')
+        #For Seam - references: https://en.wikipedia.org/wiki/Types_of_bowlers_in_cricket 
+        elif bowling_type in['Seam', 'seam', 'SEAM']:
+            seam_type = input(f'Is {player} a fast, fast-medium, medium-fast, medium, or slow bowler? Enter 1 for fast, 2 for fast-medium, 3 for medium-fast, 4 for medium, 5 for medium-slow, 6 for slow-medium, 7 for slow:')
             if seam_type == '1':
                 if bowling_arm in ['R', 'r']:
                     my_playing_XI[player] += 'right-arm fast bowler'

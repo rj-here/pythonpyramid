@@ -30,8 +30,8 @@ while captain not in my_playing_XI:
 print(f'{captain} is set as the captain of the playing XI.')
 
 viceCaptain = input('Enter the name of the vice-captain: ') #For the vice-captain
-while viceCaptain not in my_playing_XI:
-    if viceCaptain is captain:
+while viceCaptain not in my_playing_XI or viceCaptain == captain:
+    if viceCaptain == captain:
         print(f'{viceCaptain} is not a valid vice-captain as they are the captain, please enter a valid one!')
         viceCaptain = input(f'Enter a valid vice-captain: ')
     else:
@@ -50,4 +50,4 @@ for player, role in my_playing_XI.items():
         print(f'{player} ({role})')
 
 #© 2025 Rishi
-#Last updated: 31st July, 2025
+#Last updated: 6th August, 2025
